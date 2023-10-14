@@ -1,0 +1,169 @@
+$color-green: #72ac51;
+$color-gray-bg: #ebebeb;
+$color-gray-text: #1b1b1b;
+$color-gray-link-active: #eee;
+$color-darkgreen-link-active: #47752d;
+$color-gray-title: #565656;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $color-gray-bg;
+    color: $color-gray-text; // default text color
+}
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.top-header {
+    display: flex;
+    background-color: white;
+    border-bottom: 2px solid lightgray;
+    padding: 0px 20px;
+}
+
+.top-header .left-placeholder, .top-header .right-placeholder{
+    flex-grow: 1;
+}
+
+.top-header .top-header-content {
+    width: 1070px;
+    display: flex;
+}
+
+.top-header .logo {
+    height: 75px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.top-header .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-grow: 1;
+    height: 75px;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.top-header .nav-menu .menu-item {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.top-header .nav-menu .menu-item.active,
+.top-header .nav-menu .menu-item:hover {
+    background-color: $color-gray-link-active;
+    border-radius: 50px;
+}
+
+.top-header .top-header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-grow: 1;
+    gap: 15px;
+}
+
+.top-header .top-header-buttons div {
+    font-weight: 400;
+    background-color: $color-green;
+    padding: 10px 30px;
+    border-radius: 50px;
+
+    button {
+        padding: 0;
+        border: none;
+        background: none;
+        color: white;
+    }
+}
+
+.top-header .top-header-buttons div:hover {
+    background-color: $color-darkgreen-link-active;
+}
+
+.page-content {
+    width: 1070px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.page-content .left-panel {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content .left-panel .left-panel-item {
+    padding: 0 20px 5px 20px;
+    background-color: white;
+    font-size : 18px;
+    font-weight: $font-weight-semi-bold;
+    border-bottom: 1px solid $color-gray-bg;
+}
+
+.page-content .left-panel div.active {
+    background-color: $color-green;
+    color: white;
+}
+
+.page-content .right-panel {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+    .right-panel-title {
+        font-size : 36px;
+        color: $color-gray-title;
+        padding: 30px;
+    }
+}
+
+.page-content .right-panel .right-panel-content{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    .right-panel-content-item{
+        background-color: white;
+
+        .right-panel-content-item-text {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .right-panel-content-item-title{
+                font-size : 20px;
+                font-weight: $font-weight-semi-bold;
+            }
+
+            .right-panel-content-item-desc{
+                font-size : 15px;
+                line-height: normal;
+            }
+        }
+    }
+}
