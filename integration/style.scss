@@ -167,3 +167,56 @@ a {
         }
     }
 }
+
+.login-container {
+    width: 450px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 67px 60px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .login-container-title {
+        font-size : 32px;
+    }
+
+    .login-container-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 20px;
+
+        input {
+            padding: 0px 15px 0px 15px;
+            height: 43px;
+            border: 1px solid $color-gray-bg;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline-color: $color-green;
+        }
+
+        input:invalid {
+            outline-color: red;
+        }
+
+        button {
+            background-color: $color-green;
+            color: white;
+            height: 45px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: $color-darkgreen-link-active;
+        }
+    }
+}
